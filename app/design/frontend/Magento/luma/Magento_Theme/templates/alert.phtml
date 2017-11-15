@@ -1,0 +1,28 @@
+<button id="alert-1" type="button"><?php echo __('Alert') ?></button>
+<button id="alert-2" type="button"><?php echo __('Alert') ?></button>
+<div id="alert-msg" style="display: none">This is a hidden alert message in the document</div>
+<script>
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/alert'
+    ], function($,alert){
+	    $('#alert-1').click(function(){
+            alert({
+                title: 'Alert',
+                content: 'This is an alert!',
+                actions: {
+                    always: function(){}
+                }
+            });
+        })
+
+        $('#alert-2').click(function(){
+            $('#alert-msg').alert({
+	            title:'Alert Message',
+                actions: {
+                    always: function(){}
+                }
+            });
+        })
+    });
+</script>

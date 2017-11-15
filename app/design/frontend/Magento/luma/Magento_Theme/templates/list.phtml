@@ -1,0 +1,17 @@
+<div id="list">
+    <div data-role="container">
+        <p><input style="width:250px;margin-right:5px" type="text" /></p>
+
+    </div>
+    <p><button type="button" data-button="add">Add</button></p>
+</div>
+<script>
+	require(['jquery','mage/list'],function($){
+		$('#list').list({
+            template:'<p><input style="width:250px;margin-right:5px" type="text" /><button type="button" data-button="remove">Remove</button></p>',
+            templateWrapper:'<p></p>',
+            maxItems:5,
+            maxItemsAlert:'You can only have 5 items'
+		});
+	})
+</script>

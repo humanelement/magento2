@@ -1,0 +1,35 @@
+<?php $imgUrl = $this->getBaseUrl().'pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/3/7/37f60fd200000578-0-image-a-5_1473156426673.jpg' ?>
+<div id="magnifier"><img src="<?php echo $imgUrl ?>" /></div>
+<style>
+    #magnifier{
+        width:600px;
+    }
+</style>
+<script type="text/x-magento-init">
+{
+    "#magnifier": {
+            "mage/gallery/gallery": {
+                "data": [{
+                    "img": "<?php echo $imgUrl ?>",
+                    "full": "<?php echo $imgUrl ?>",
+                    "caption": "Image 1",
+                    "isMain": "true"
+                }],
+                "mixins": ["magnifier/magnify"],
+                "magnifierOpts": {
+                   "enabled": true,
+                   "eventType": "hover",
+                   "width": 960,
+                   "height": 0,
+                   "top": 0,
+                   "left": 0,
+                   "fullscreenzoom": 1
+                },
+                "options":{
+                    "allowfullscreen":true
+                },
+                "fullscreen":{}
+            }
+        }
+    }
+</script>

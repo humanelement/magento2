@@ -1,0 +1,34 @@
+<div id="modal_content_popup">
+	<div>Some Content</div>
+	<div>Some Content</div>
+	<div>Some Content</div>
+</div>
+<button id="popup-modal" type="button">Open Popup</button>
+
+<div id="modal_content_slide">
+	<div>Some Content</div>
+	<div>Some Content</div>
+	<div>Some Content</div>
+</div>
+<button id="slide-modal" type="button">Open Slide</button>
+
+<script>
+	require(['jquery','Magento_Ui/js/modal/modal'],function($){
+        $('#modal_content_popup').modal({
+            type: 'popup',
+            title:'Popup',
+            clickableOverlay: true
+        });
+        $('#popup-modal').click(function(){
+            $('#modal_content_popup').modal('openModal');
+        })
+        $('#modal_content_slide').modal({
+            type: 'slide',
+            title:'Slide',
+            clickableOverlay: true
+        });
+        $('#slide-modal').click(function(){
+            $('#modal_content_slide').modal('openModal');
+        })
+	})
+</script>

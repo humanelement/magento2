@@ -1,0 +1,15 @@
+#!/bin/bash
+pestle.phar magento2:generate:module HumanElement Squashtoberfest 0.0.1
+pestle.phar magento2:generate:crud-model HumanElement_Squashtoberfest Squashtoberfest
+pestle.phar magento2:generate:acl HumanElement_Squashtoberfest HumanElement_Squashtoberfest::squashtoberfests
+pestle.phar magento2:generate:menu HumanElement_Squashtoberfest "" HumanElement_Squashtoberfest::squashtoberfests HumanElement_Squashtoberfest::squashtoberfests "Squashtoberfest squashtoberfests" humanelement_squashtoberfest_squashtoberfests/index/index 10
+pestle.phar magento2:generate:menu HumanElement_Squashtoberfest HumanElement_Squashtoberfest::squashtoberfests HumanElement_Squashtoberfest::squashtoberfests_list HumanElement_Squashtoberfest::squashtoberfests "Squashtoberfest Objects" humanelement_squashtoberfest_squashtoberfests/index/index 10
+pestle.phar magento2:generate:route HumanElement_Squashtoberfest adminhtml humanelement_squashtoberfest_squashtoberfests Index Index    
+pestle.phar magento2:generate:view HumanElement_Squashtoberfest adminhtml humanelement_squashtoberfest_squashtoberfests_index_index Main content.phtml 1column
+pestle.phar magento2:generate:ui:grid HumanElement_Squashtoberfest humanelement_squashtoberfest_squashtoberfests 'HumanElement\Squashtoberfest\Model\ResourceModel\Squashtoberfest\Collection' humanelement_squashtoberfest_squashtoberfest_id
+pestle.phar magento2:generate:ui:add-column-text app/code/HumanElement/Squashtoberfest/view/adminhtml/ui_component/humanelement_squashtoberfest_squashtoberfests.xml title "Title"
+pestle.phar magento2:generate:ui:form HumanElement_Squashtoberfest 'HumanElement\Squashtoberfest\Model\Squashtoberfest' HumanElement_Squashtoberfest::squashtoberfests
+pestle.phar magento2:generate:ui:add_to_layout app/code/HumanElement/Squashtoberfest/view/adminhtml/layout/humanelement_squashtoberfest_squashtoberfests_index_index.xml content humanelement_squashtoberfest_squashtoberfests
+pestle.phar magento2:generate:acl:change_title app/code/HumanElement/Squashtoberfest/etc/acl.xml HumanElement_Squashtoberfest::squashtoberfests "Manage squashtoberfests"
+pestle.phar magento2:generate:controller_edit_acl app/code/HumanElement/Squashtoberfest/Controller/Adminhtml/Index/Index.php HumanElement_Squashtoberfest::squashtoberfests
+pestle.phar magento2:generate:remove-named-node app/code/HumanElement/Squashtoberfest/view/adminhtml/layout/humanelement_squashtoberfest_squashtoberfests_index_index.xml block humanelement_squashtoberfest_block_main

@@ -1,0 +1,22 @@
+<button id="dropdown-trigger" type="button">Dropdown</button>
+<div id="dropdow-wrapper">
+    <ul id="dropdownDialog">
+        <li>Test item 1</li>
+        <li>Test item 2</li>
+        <li>Test item 3</li>
+        <li>Test item 4</li>
+    </ul>
+</div>
+<script>
+	require([
+	    'jquery',
+		'dropdownDialog'
+	],function($){
+        $('#dropdow-wrapper').dropdownDialog({
+            autoPosition: true
+        });
+	    $('#dropdown-trigger').click(function(){
+            $('#dropdow-wrapper').dropdownDialog('open');
+        })
+	})
+</script>

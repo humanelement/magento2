@@ -1,0 +1,18 @@
+<button type="button" id="start">Start Loader</button>
+<script>
+    require(['jquery','mage/loader'],function($){
+        $('#start').click(function(){
+            $('body').loader({
+                texts:{
+                    loaderText:"Custom Message"
+                }
+            })
+
+            $('body').trigger('processStart');
+
+            setTimeout(function(){
+                $('body').trigger('processStop');
+            },3000)
+        })
+    })
+</script>

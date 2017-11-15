@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="hidden_fields"><!-- Hidden fields -->
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+                <item name="label" xsi:type="string" translate="true">Label</item>
+                <item name="sortOrder" xsi:type="number">200</item>
+                <item name="display" xsi:type="string">false</item>
+                <item name="additionalClasses" xsi:type="string">hiddenFieldSet</item>
+            </item>
+        </argument>
+
+        <field name="holder">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="additionalClasses" xsi:type="string">holder</item>
+                    <item name="name" xsi:type="string">name</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="another_holder.extradata">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="additionalClasses" xsi:type="string">another_holder</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+
+    <fieldset name="fields">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+                <item name="label" xsi:type="string" translate="true">fields</item>
+                <item name="sortOrder" xsi:type="number">300</item>
+                <item name="additionalClasses" xsi:type="string">shownFieldSet</item>
+            </item>
+        </argument>
+        <field name="addfield">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">HumanElement\Squashtoberfest\Ui\Component\Listing\Page\Options</item>
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="label" xsi:type="string" translate="true">Tilføj nyt felt</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="dataScope" xsi:type="string">new_block</item>
+                    <item name="default" xsi:type="string">0</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

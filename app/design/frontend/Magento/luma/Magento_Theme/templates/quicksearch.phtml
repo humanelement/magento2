@@ -1,0 +1,13 @@
+<form id="quicksearch-form" action="<?php echo $this->getBaseUrl() ?>catalogsearch/result/">
+    <input id="quicksearch" type="text" placeholder="Enter your search term here"/>
+    <button type="submit">Search</button>
+</form>
+<script>
+	require(['jquery','quickSearch'],function($){
+        $('#quicksearch').quickSearch({
+            submitBtn: 'button[type="submit"]',
+            formSelector : $('#quicksearch-form'),
+            url:$('#quicksearch-form').attr('action')
+        });
+	})
+</script>

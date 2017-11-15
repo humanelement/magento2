@@ -1,0 +1,65 @@
+<ul id="custom-navigation">
+	<li>
+		<a href="#">Item 1</a>
+		<ul>
+			<li>
+				<a href="#">Item 1</a>
+				<ul>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Item 2</a>
+				<ul>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+					<li><a href="#">Item 4</a></li>
+					<li><a href="#">Item 5</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Item 3</a></li>
+			<li><a href="#">Item 4</a></li>
+			<li><a href="#">Item 5</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Item 2</a>
+		<ul>
+			<li><a href="#">Item 1</a></li>
+			<li><a href="#">Item 2</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Item 2</a>
+	</li>
+</ul>
+<script>
+	require(['jquery','mage/menu'],function($){
+	    $('#custom-navigation').navigation();
+	})
+</script>
+
+<style>
+	#custom-navigation{
+		padding-left:0;
+	}
+
+	#custom-navigation li{
+		list-style-type: none;
+		padding-left:0;
+	}
+
+	#custom-navigation > li{
+		/*display:inline-block;*/
+	}
+
+	#custom-navigation > li > ul{
+		/*position:absolute;*/
+		top:100%;
+		left:0;
+		padding-left:0;
+	}
+</style>

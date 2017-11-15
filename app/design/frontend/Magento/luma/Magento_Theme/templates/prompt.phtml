@@ -1,0 +1,25 @@
+<button id="open-prompt" type="button">Open Prompt</button>
+
+<script>
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/prompt',
+        'Magento_Ui/js/modal/alert'
+    ], function($,prompt,alert) { // Variable that represents the `prompt` function
+
+	    $('#open-prompt').click(function(){
+            prompt({
+                title: 'Prompt',
+                content: 'Enter your name',
+                actions: {
+                    confirm: function(data){
+						alert({
+							title:'Hello, ' + data + '!'
+						})
+                    },
+                    cancel: function(){}
+                }
+            });
+	    });
+    });
+</script>

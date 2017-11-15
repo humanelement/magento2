@@ -1,0 +1,28 @@
+<button id="confirmation" type="button"><?php echo __('Confirmation') ?></button>
+<div style="display: none" id="confirmation-msg"><?php echo __('This is a confirmation!') ?></div>
+<script>
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/confirm',
+        'Magento_Ui/js/modal/alert'
+    ], function($,confirmation,alert){
+        $('#confirmation').click(function(){
+            confirmation({
+                title: 'Confirmation',
+                content: 'This is a confirmation message',
+                actions: {
+                    confirm: function(){
+	                    alert({
+		                    title:'You hit confirm'
+	                    })
+                    },
+                    cancel: function(){
+                        alert({
+                            title:'You hit cancel'
+                        })
+                    }
+                }
+            })
+        })
+    });
+</script>
